@@ -11,7 +11,7 @@ namespace GraphqlBasics.Models
         public string StudentName { get; set; }
         public int StudentSection { get; set; }
 
-        public string SchoolName { get; set; }
+        public School SchoolDetails{ get; set; }
 
     }
 }

@@ -30,12 +30,14 @@ namespace GraphqlBasics
         {
             services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<StudentQuery>();
-           
-            services.AddGraphQL(p => SchemaBuilder.New().AddServices(p)
-            .AddType<StudentType>()
-            .AddQueryType<StudentQuery>()
-            .Create()
-            );
+            services.AddGraphQLServer().AddQueryType<StudentQuery>();
+            services.AddGraphQLServer().AddType<StudentType>();
+
+            //services.AddGraphQL(p => SchemaBuilder.New().AddServices(p)
+            //.AddType<StudentType>()
+            //.AddQueryType<StudentQuery>()
+            //.Create()
+            //);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

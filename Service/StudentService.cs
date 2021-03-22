@@ -18,7 +18,7 @@ namespace GraphqlBasics.Service
                 {
                     StudentId = i,
                     StudentName = "Student" + i,
-                    SchoolName = "s" + i,
+                    SchoolDetails = new School() { SchoolAddress = "Bangalore", SchooldName = "NPS", SchoolId = i },
                     StudentSection = i
                 }); ;
             }
